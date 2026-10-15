@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-aero-navy: #0B1320;
+  --color-aero-deep: #060C16;
+  --color-aero-card: #101B2B;
+  --color-aero-card-hover: #152438;
+  --color-aero-border: #1E324D;
+  --color-aero-blue: #0284C7;
+  --color-aero-cyan: #38BDF8;
+  --color-aero-slate: #94A3B8;
+  --color-aero-text: #F8FAFC;
+  --color-aero-graphite: #1E293B;
+}
+
+@layer base {
+  body {
+    background-color: #070e18;
+    color: #F8FAFC;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #0284C7;
+    color: #FFFFFF;
+  }
+}
+
+/* Subtle Technical Grid Texture */
+.aero-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.aero-grid-dense {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(2, 132, 199, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.06) 1px, transparent 1px);
+}
+
+/* Subtle aerospace glow */
+.aero-glow {
+  box-shadow: 0 0 50px -10px rgba(2, 132, 199, 0.15);
+}
+
+.aero-glow-cyan {
+  box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.2);
+}
+
+/* Smooth Focus States for WCAG 2.2 AA */
+*:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+a, button {
+  transition-property: color, background-color, border-color, transform, opacity, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
