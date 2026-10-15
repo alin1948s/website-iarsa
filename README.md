@@ -1,46 +1,48 @@
 # IAR S.A. Brașov
 
-Website bilingv de prezentare pentru IAR S.A. Brașov, construit cu Next.js. Interfața include pagini despre companie și istoria sa, capabilități industriale, aeronave, mentenanță MRO, relații cu investitorii și contact.
+A bilingual presentation website for IAR S.A. Brașov, built with Next.js. It covers the company and its history, industrial capabilities, aircraft, MRO maintenance, investor relations and contact information.
 
-## Capturi de ecran
+The English site is available at **/en**. Some official labels, company facts and original investor documents remain in Romanian.
 
-### Pagina principală
+## Screenshots
 
-![Pagina principală IAR S.A. Brașov](screenshots/home.png)
+### Home page
 
-### Capabilități și modernizare
+![IAR S.A. Brașov home page in English](screenshots/home.png)
 
-![Pagina de capabilități aeronautice](screenshots/capabilities.png)
+### Capabilities and modernization
 
-### Mentenanță MRO
+![IAR aerospace capabilities page in English](screenshots/capabilities.png)
 
-![Pagina MRO](screenshots/mro.png)
+### MRO maintenance
 
-## Tehnologii
+![IAR MRO page in English](screenshots/mro.png)
 
-- Next.js 15 cu App Router
-- React 19 și TypeScript
+## Technologies
+
+- Next.js 15 with App Router
+- React 19 and TypeScript
 - Tailwind CSS 4
-- Radix UI, Framer Motion și Zod
+- Radix UI, Framer Motion and Zod
 
-## Rulare locală
+## Run locally
 
-Ai nevoie de Node.js 20 sau mai nou.
+Requires Node.js 20 or later.
 
-```bash
+~~~bash
 npm ci
 npm run dev
-```
+~~~
 
-Deschide [http://localhost:3000](http://localhost:3000). Ruta rădăcină redirecționează la `/ro`; versiunea în engleză este disponibilă la `/en`.
+Open [http://localhost:3000](http://localhost:3000). The root route redirects to **/ro**; the English version is at **/en**.
 
-Pentru o versiune de producție:
+For a production build:
 
-```bash
+~~~bash
 npm run build
 npm start
-```
+~~~
 
-## Observație despre formularul de contact
+## Contact form
 
-Ruta API validează datele formularului și le scrie în logurile serverului. Trimiterea efectivă a mesajelor prin e-mail nu este configurată în acest repository.
+The API route validates form data and writes it to the server logs. Email delivery is not configured in this repository.
